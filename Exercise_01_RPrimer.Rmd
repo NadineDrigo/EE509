@@ -143,18 +143,30 @@ Packages are installed using the ‘Install Packages’ button under the “Pack
 
 ```
 1.	Evaluate the following:
-   a.	ln(1)
-   b.	ln(0)
-   c.	ln(e)
-   d.	ln(-5)
-   e.	-ln(5)
-   f.	ln(1/5)
-g.	How does R represent when the output of a function is not a number?
-2.	Why are we multiplying the results of the atan and atan2 functions by 180/pi? 
-3.	How is the atan2 function different from the atan function? 
-4.	What is the difference between log and log10?
+   a.	ln(1) log(1)
+   b.	ln(0) log(0)
+   c.	ln(e) log(exp(1))
+   d.	ln(-5) log(-5)
+   e.	-ln(5) -log(5)
+   f.	ln(1/5) log(1/5)
+g.	How does R represent when the output of a function is not a number? NaN
+2.	Why are we multiplying the results of the atan and atan2 functions by 180/pi? because the functions take in radiants and we want the answer in degrees
+3.	How is the atan2 function different from the atan function? atan takes one argument while atan2 takes 2 arguments
+4.	What is the difference between log and log10? log is base e (ln) while log10 is base 10
 5.	Given a right triangle with sides x = 5 and y = 13, calculate the length of the hypotenuse (show code)
+x = 5
+y = 13
+i = sqrt((x^2)+(y^2))
 6.	If a population starts with a density of 5 individuals/hectare and grows exponentially at a growth rate r=0.04/year, what is the size of the population in π years? (show code)
+d = 5
+r = 0.04
+y = 1
+for (y in 1:pi){
+d = d + r
+y = y + 1
+print(paste("The year is", y -1,"and the density is",d))
+}
+
 7.	Subtract the month you were born from the remainder left after you divide the year you were born by the day you were born (show code)
 ```
 
